@@ -25,3 +25,16 @@ for(let img of images) {
 // getElementsByClassName - to retrieve HTMLCollection of Elements by class attribute
 const squareImages = document.getElementsByClassName('square');
 console.log('collection of square images:', squareImages);
+
+// querySelector - finds first element based on selector argument
+// h1/#square/.large
+// const elementSelector = document.querySelector('p');
+// console.log(elementSelector);
+// const idSelector = document.querySelector('#banner');
+// console.log(idSelector);
+// const classSelector = document.querySelector('.square');
+// console.log(classSelector);
+// const imgSelector = document.querySelector('img:nth-of-type(2)');
+// console.log(imgSelector);
+const typeAndAttributeSelector = document.querySelector('a[title="List of chicken breeds"]');
+console.log(typeAndAttributeSelector);
