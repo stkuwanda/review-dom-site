@@ -6,7 +6,7 @@
 // of useful methods and properties
 console.dir(document); // log the document object
 
-// getElementById - to get object representation of an element
+// getElementById - to get object representation of an element by id attribute
 const image = document.getElementById('banner');
 console.dir(image); // log the document object
 
@@ -19,4 +19,9 @@ for(let img of images) {
   console.log('image src:', img.src);
   // programmatically update image src attribute
   // img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg'; 
+
 }
+
+// getElementsByClassName - to retrieve HTMLCollection of Elements by class attribute
+const squareImages = document.getElementsByClassName('square');
+console.log('collection of square images:', squareImages);
