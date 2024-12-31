@@ -38,3 +38,9 @@ console.log('collection of square images:', squareImages);
 // console.log(imgSelector);
 const typeAndAttributeSelector = document.querySelector('a[title="List of chicken breeds"]');
 console.log(typeAndAttributeSelector);
+
+// querySelectorAll() - retrieves a collection of elements/types based on selector argument
+// const elementsSelected = document.querySelectorAll('p');
+// console.log(elementsSelected);
+const anchorsInsideParagraphElementsSelected = document.querySelectorAll('p a');
+console.log(anchorsInsideParagraphElementsSelected);
