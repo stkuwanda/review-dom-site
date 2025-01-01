@@ -71,4 +71,14 @@ console.log(anchorsInsideParagraphElementsSelected);
 // The innerHTML property in JavaScript is used to get or set the HTML content within an element. This property is widely 
 // used for manipulating the DOM (Document Object Model) to dynamically change the content of web pages.
 
+// getAttribute and setAttribute
+// - The getAttribute() method in JavaScript is used to retrieve the value of a specified attribute from an element. If the 
+// attribute does not exist, it returns null
+// - The setAttribute() method in JavaScript is used to set a new value to an attribute on a specified element. If the attribute 
+// does not exist, it is created first
+// const firstImage = document.querySelector('img');
+// firstImage.alt = 'Silkie Chicken Banner';
+// firstImage.setAttribute('alt', 'New Banner');
+// firstImage.setAttribute('title', 'Silkie Chicken');
+
 
