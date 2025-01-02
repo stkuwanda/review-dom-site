@@ -81,4 +81,15 @@ console.log(anchorsInsideParagraphElementsSelected);
 // firstImage.setAttribute('alt', 'New Banner');
 // firstImage.setAttribute('title', 'Silkie Chicken');
 
+// style object has all the style props set in-line on the element
+// style tag or style sheet styles are excluded from the style object
+const h1Element = document.querySelector('h1');
+console.log('h1 style object:', h1Element.style);
+console.log('h1 style object color prop:', h1Element.style.color);
+h1Element.style.color = 'green';
+h1Element.style.fontSize = '3em';
+h1Element.style.border = '2px solid lime';
+console.log(window.getComputedStyle(h1Element).border);
+console.log(window.getComputedStyle(h1Element).color);
+
 
