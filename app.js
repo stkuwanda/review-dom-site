@@ -93,11 +93,17 @@ console.log(anchorsInsideParagraphElementsSelected);
 // console.log(window.getComputedStyle(h1Element).color);
 
 // classList prop allows easy adding of classes to an element
-const h2 = document.querySelector('h2');
-console.log('classList:', h2.classList);
-h2.classList.add('border'); // adds class
-h2.classList.add('purple');
-h2.classList.remove('border');// removes class
-h2.classList.contains('border'); // return boolean
-h2.classList.toggle('purple'); // removes or adds class depending on previous call
+// const h2 = document.querySelector('h2');
+// console.log('classList:', h2.classList);
+// h2.classList.add('border'); // adds class
+// h2.classList.add('purple');
+// h2.classList.remove('border');// removes class
+// h2.classList.contains('border'); // return boolean
+// h2.classList.toggle('purple'); // removes or adds class depending on previous call
+
+// parentElement for DOM tree traversal
+const firstBold = document.querySelector('b');
+console.log('first bold element:', firstBold);
+console.log('parent element:', firstBold.parentElement);
+console.log('grandparent element:', firstBold.parentElement.parentElement);
 
