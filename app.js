@@ -39,7 +39,7 @@ console.log('collection of square images:', squareImages);
 const typeAndAttributeSelector = document.querySelector('a[title="List of chicken breeds"]');
 console.log(typeAndAttributeSelector);
 
-// querySelectorAll() - retrieves a collection of elements/types based on selector argument
+// querySelectorAll() - retrieves a NodeList collection of elements/types based on selector argument
 // const elementsSelected = document.querySelectorAll('p');
 // console.log(elementsSelected);
 const anchorsInsideParagraphElementsSelected = document.querySelectorAll('p a');
@@ -112,3 +112,9 @@ const p = firstBold.parentElement;
 console.log('Child-element count of selected p:', p.childElementCount);
 console.log('Child elements of selected p:', p.children); // returns HTMLCollection of child elements in order of occurrence
 
+// Sibling traversal
+const firstSquareImage = document.querySelector('.square');
+console.log('first square image element:', firstSquareImage);
+console.log('nextSibling:', firstSquareImage.nextSibling); // returns a text node because the images are separated by spaces which are represented by text node in the DOM
+console.log('nextElementSibling:', firstSquareImage.nextElementSibling); // returns next "element" sibling of this element
+console.log('previousElementSibling:', firstSquareImage.previousElementSibling); // returns p element in this case
