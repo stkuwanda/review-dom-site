@@ -107,3 +107,8 @@ console.log('first bold element:', firstBold);
 console.log('parent element:', firstBold.parentElement);
 console.log('grandparent element:', firstBold.parentElement.parentElement);
 
+// childElement traversal
+const p = firstBold.parentElement;
+console.log('Child-element count of selected p:', p.childElementCount);
+console.log('Child elements of selected p:', p.children); // returns HTMLCollection of child elements in order of occurrence
+
