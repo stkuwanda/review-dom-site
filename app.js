@@ -130,7 +130,7 @@ newImg.classList.add('square');
 // appendChild: append new element(node) as last child to body element and returns the appended node
 document.body.appendChild(newImg);
 const newH3 = document.createElement('h3');
-newH3.innerText = 'I am new !';
+newH3.innerText = 'I am new!';
 document.body.appendChild(newH3);
 
 // append: appends one or more nodes and/or DOMStrings(text nodes) after the last child of the element. has no return value
@@ -142,4 +142,17 @@ p.append('I am new appended text. ', 'More text. ', 'We love text!'); // appende
 const newB = document.createElement('b');
 newB.append('Hello!');
 p.prepend(newB);
+
+// insertAdjacentElement: inserts a node relative to the element (it is invoked upon)
+const newH2 = document.createElement('h2');
+newH2.prepend('Are adorable chickens');
+const h1 = document.querySelector('h1');
+h1.insertAdjacentElement('afterend', newH2); // options beforebegin, afterbegin, beforeend, afterend
+
+// after: equivalent to afterend position with insertAdjacentElement
+const h3 = document.createElement('h3');
+h3.innerText = 'About Silkie chickens';
+newH2.after(h3);
+
+// before: equivalent to beforebegin position with insertAdjacentElement
 
