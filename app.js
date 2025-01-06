@@ -137,3 +137,9 @@ document.body.appendChild(newH3);
 const p = document.querySelector('p');
 p.append('I am new appended text. ', 'More text. ', 'We love text!'); // appended a text node (DOMString).
 // document.body.append(newImg);
+
+// prepend: attaches one or more nodes and/or DOMStrings(text nodes) before the first child of the element. has no return value
+const newB = document.createElement('b');
+newB.append('Hello!');
+p.prepend(newB);
+
