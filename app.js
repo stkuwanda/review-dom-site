@@ -156,3 +156,13 @@ newH2.after(h3);
 
 // before: equivalent to beforebegin position with insertAdjacentElement
 
+// removeChild old method: remove DOM element
+// const img = document.querySelector('#banner');
+// const parent = img.parentElement;
+// parent.removeChild(img);
+
+// remove: remove DOM element
+// const img = document.querySelector('#banner');
+// img.remove();
+
+
