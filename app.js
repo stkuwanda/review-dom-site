@@ -12,19 +12,19 @@ console.dir(image); // log the document object
 
 // getElementsByTagName - retrieves an iterable collection (HTMLCollection)
 // of all the elements with the specified tag names
-const images = document.getElementsByTagName('img');
-console.log('collection:', images);
+// const images = document.getElementsByTagName('img');
+// console.log('collection:', images);
 
-for(let img of images) {
-  console.log('image src:', img.src);
-  // programmatically update image src attribute
-  // img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg'; 
+// for(let img of images) {
+//   console.log('image src:', img.src);
+//   // programmatically update image src attribute
+//   // img.src = 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Silky_bantam.jpg/440px-Silky_bantam.jpg'; 
 
-}
+// }
 
 // getElementsByClassName - to retrieve HTMLCollection of Elements by class attribute
-const squareImages = document.getElementsByClassName('square');
-console.log('collection of square images:', squareImages);
+// const squareImages = document.getElementsByClassName('square');
+// console.log('collection of square images:', squareImages);
 
 // querySelector - finds first element based on selector argument
 // h1/#square/.large
@@ -36,14 +36,14 @@ console.log('collection of square images:', squareImages);
 // console.log(classSelector);
 // const imgSelector = document.querySelector('img:nth-of-type(2)');
 // console.log(imgSelector);
-const typeAndAttributeSelector = document.querySelector('a[title="List of chicken breeds"]');
-console.log(typeAndAttributeSelector);
+// const typeAndAttributeSelector = document.querySelector('a[title="List of chicken breeds"]');
+// console.log(typeAndAttributeSelector);
 
 // querySelectorAll() - retrieves a NodeList collection of elements/types based on selector argument
 // const elementsSelected = document.querySelectorAll('p');
 // console.log(elementsSelected);
-const anchorsInsideParagraphElementsSelected = document.querySelectorAll('p a');
-console.log(anchorsInsideParagraphElementsSelected);
+// const anchorsInsideParagraphElementsSelected = document.querySelectorAll('p a');
+// console.log(anchorsInsideParagraphElementsSelected);
 
 // innerText property
 // The innerText property focuses on the rendered text content. When you use innerText to read the 
@@ -102,19 +102,38 @@ console.log(anchorsInsideParagraphElementsSelected);
 // h2.classList.toggle('purple'); // removes or adds class depending on previous call
 
 // parentElement for DOM tree traversal
-const firstBold = document.querySelector('b');
-console.log('first bold element:', firstBold);
-console.log('parent element:', firstBold.parentElement);
-console.log('grandparent element:', firstBold.parentElement.parentElement);
+// const firstBold = document.querySelector('b');
+// console.log('first bold element:', firstBold);
+// console.log('parent element:', firstBold.parentElement);
+// console.log('grandparent element:', firstBold.parentElement.parentElement);
 
 // childElement traversal
-const p = firstBold.parentElement;
-console.log('Child-element count of selected p:', p.childElementCount);
-console.log('Child elements of selected p:', p.children); // returns HTMLCollection of child elements in order of occurrence
+// const p = firstBold.parentElement;
+// console.log('Child-element count of selected p:', p.childElementCount);
+// console.log('Child elements of selected p:', p.children); // returns HTMLCollection of child elements in order of occurrence
 
 // Sibling traversal
-const firstSquareImage = document.querySelector('.square');
-console.log('first square image element:', firstSquareImage);
-console.log('nextSibling:', firstSquareImage.nextSibling); // returns a text node because the images are separated by spaces which are represented by text node in the DOM
-console.log('nextElementSibling:', firstSquareImage.nextElementSibling); // returns next "element" sibling of this element
-console.log('previousElementSibling:', firstSquareImage.previousElementSibling); // returns p element in this case
+// const firstSquareImage = document.querySelector('.square');
+// console.log('first square image element:', firstSquareImage);
+// console.log('nextSibling:', firstSquareImage.nextSibling); // returns a text node because the images are separated by spaces which are represented by text node in the DOM
+// console.log('nextElementSibling:', firstSquareImage.nextElementSibling); // returns next "element" sibling of this element
+// console.log('previousElementSibling:', firstSquareImage.previousElementSibling); // returns p element in this case
+
+// createElement - programmatically create DOM elements
+const newImg = document.createElement('img'); 
+console.log('new image:', newImg);
+console.dir(newImg);
+newImg.src = 'https://images.pexels.com/photos/1170986/pexels-photo-1170986.jpeg';
+newImg.classList.add('square');
+// newImg.width = '400';
+
+// appendChild: append new element(node) as last child to body element and returns the appended node
+document.body.appendChild(newImg);
+const newH3 = document.createElement('h3');
+newH3.innerText = 'I am new !';
+document.body.appendChild(newH3);
+
+// append: appends one or more nodes and/or DOMStrings(text nodes) after the last child of the element. has no return value
+const p = document.querySelector('p');
+p.append('I am new appended text. ', 'More text. ', 'We love text!'); // appended a text node (DOMString).
+// document.body.append(newImg);
